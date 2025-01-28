@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    background: url(imagepixel1.jpeg);
+    background-position: center;
+    background-size: cover ;
+}
+.header{
+    background-color: rgba(0,0,0,0.3);
+    padding: 1rem 2rem;
+   
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color:#73e7cd;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .burger_menu_button{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+.action_button {
+    background-color: #73e7cd;
+    color: #120D31;
+    border: 1px solid #73e7cd;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8PX;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+.action_button:hover{
+    color: #fff;
+    border: 1px solid #ffffffaa;
+}
+.pro{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.pro:hover{
+    background-color: #fff;
+    color: #120D31;
+}
+/* Burgger menu */
+
+.burgger_menu{
+    display: none; 
+    height: 0;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 200PX;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition:  height 0.5s ;
+}
+.burgger_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divider{
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto 1rem;
+   
+}
+.burgger_menu .action_button{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons_burgger_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.burgger_menu.open{
+    height: 310px;
+}
+ 
+
+
+/* RESPONSIVE */
+
+@media (max-width:990px){
+    .header{
+        background: none;
+    }
+    .navbar .links, 
+    .navbar .buttons{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .burgger_menu{
+        display: block;
+    }
+    .navbar .burger_menu_button{
+        display: block;
+    }
+   
+
+}
+
+@media (max-width:570px){
+
+    .burgger_menu{
+        left: 2rem ;
+        width: unset;
+    }
+
+}
